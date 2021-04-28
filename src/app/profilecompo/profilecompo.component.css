@@ -1,0 +1,19 @@
+.addcreden a{
+  font-size: 0.7rem;
+  color: #939598;
+}
+.borderit{
+  border: 1px solid red;
+}
+.answerText,
+.ansfield {
+  width: 100%;
+}
+/* .example-stretched-tabs{
+  max-width: 20px;
+} */
+.belowdiv{
+  /* max-height: 500px; */
+  min-height: 200px;
+  /* border: 1px solid red; */
+}

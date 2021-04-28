@@ -10,6 +10,14 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
@@ -22,10 +30,15 @@ import { AboutbodyComponent } from './aboutbody/aboutbody.component';
 import { ServicesbodyComponent } from './servicesbody/servicesbody.component';
 import { QuestionAnswerComponent } from './question-answer/question-answer.component';
 import { AddquesComponent } from './addques/addques.component';
-import {MatSelectModule} from '@angular/material/select';
 import { AddansComponent } from './addans/addans.component';
+import { ProfilecompoComponent } from './profilecompo/profilecompo.component';
+import { InterestingpeoplesComponent } from './interestingpeoples/interestingpeoples.component';
+import { CreatecategoryComponent } from './createcategory/createcategory.component'
 
 
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CredentialhighlightComponent } from './credentialhighlight/credentialhighlight.component';
+import { CategoryprofileComponent } from './categoryprofile/categoryprofile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +53,12 @@ import { AddansComponent } from './addans/addans.component';
     ServicesbodyComponent,
     QuestionAnswerComponent,
     AddquesComponent,
-    AddansComponent
+    AddansComponent,
+    ProfilecompoComponent,
+    InterestingpeoplesComponent,
+    CreatecategoryComponent,
+    CredentialhighlightComponent,
+    CategoryprofileComponent
   ],
   imports: [
     BrowserModule,
@@ -49,9 +67,17 @@ import { AddansComponent } from './addans/addans.component';
 
     MatButtonModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatTabsModule,
+    MatFormFieldModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

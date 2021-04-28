@@ -1,53 +1,44 @@
-<div class="header-bottom  header-sticky">
-  <div class="container-fluid">
-      <div class="row align-items-center">
-          <!-- Logo -->
-          <div class="col-xl-2 col-lg-1 col-md-1">
-              <div class="logo">
-                <a href="index.html"><img src="assets/mysources/img/logo/logo.png" alt=""></a>
-                <!-- <div class="col-xl-2 col-lg-3 col-md-3">
-                    <div class="header-right-btn f-right d-none d-lg-block">
-                        <a href="#" class="btn header-btn mybutton">Contact Now</a>
-                    </div>
-                </div> -->
-              </div>
-          </div>
-          <div class="col-xl-8 col-lg-8 col-md-8">
-              <!-- Main-menu -->
-              <div class="main-menu f-right d-none d-lg-block">
-                  <nav>
-                      <ul id="navigation">
-                          <li><a href="index.html">Home</a></li>
-                          <li><a href="/about">Following</a></li>
-                          <li><a href="/services">Services</a></li>
-                          <li><a href="/questions">Questions</a></li>
-                          <li><a href="/answer">Answer</a></li>
-                          <li><a href="#">Pages</a>
-                              <ul class="submenu">
-                                  <li><a href="contact.html">Contact</a></li>
-                                  <li><a href="elements.html">Element</a></li>
-                                  <li><a href="case_details.html">Case Details</a></li>
-                              </ul>
-                          </li>
-                      </ul>
+<!-- SECOND NAVBAR STARTRED HERE -->
 
-                  </nav>
-              </div>
-          </div>
-          <!-- <div class="col-xl-2 col-lg-3 col-md-3">
-              <div class="header-right-btn f-right d-none d-lg-block">
-                  <a href="#" class="btn header-btn mybutton">Contact Now</a>
-              </div>
-          </div> -->
-          <div class="container-fluid col-xl-2 col-lg-3 col-md-3">
-            <form class="d-flex">
-              <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search">
-            </form>
-          </div>
-          <!-- Mobile Menu -->
-          <div class="col-12">
-              <div class="mobile_menu d-block d-lg-none"></div>
-          </div>
-      </div>
-  </div>
-</div>
+<nav class="navbar navbar-expand-xl nabar-light bg-light">
+  <a href="#" class="navbar-brand ml-4">
+      <img src="assets/mysources/img/logo/logo.png" alt="">
+  </a>
+  <ul class="navbar-nav " id="navigations">
+    <li class="nav-item m-2 ml-5"><a href="#" class="nav-link">HOME</a></li>
+    <li class="nav-item m-2"><a href="/about" class="nav-link">FOLLOWING</a></li>
+    <li class="nav-item m-2"><a href="/services" class="nav-link">SERVICES</a></li>
+    <li class="nav-item m-2"><a href="/questions" class="nav-link">QUESTIONS</a></li>
+    <li class="nav-item m-2"><a href="/answer" class="nav-link">ANSWERS</a></li>
+    <li class="nav-item m-2"><a href="#" class="nav-link">SIGN UP</a></li>
+    <!-- <div class="ml-auto my-auto userprofile"><a href="#" [matMenuTriggerFor]="menu" ><img src="../../assets/svg(s)/user-profile.svg" width="30" alt=""></a></div> -->
+    <button mat-button [matMenuTriggerFor]="menu"><img src="../../assets/svg(s)/user-profile.svg" width="24" alt=""></button>
+<mat-menu #menu="matMenu" class="optionmenu">
+  <button  mat-menu-item class="d-block btn-block"><img src="../../assets/svg(s)/user-profile.svg" width="40" alt=""></button>
+  <button mat-menu-item (click)="profileop()" class="btn-block mt-2"><p class="namebtn">ARYAN KAPOOR <i class="bi bi-arrow-right-circle-fill"></i></p></button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item><i class="bi bi-bookmark"></i>Messages</button>
+  <!-- <button mat-menu-item>Create Ad</button> -->
+  <button mat-menu-item>Your Content</button>
+  <button mat-menu-item><mat-icon>bookmark</mat-icon>Bookmarks</button>
+  <button mat-menu-item><mat-icon>drafts</mat-icon>Drafts</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Languages</button>
+  <button mat-menu-item>help</button>
+  <button mat-menu-item>Logout</button>
+
+</mat-menu>
+
+  </ul>
+
+  <form class="form-inline my-2 my-lg-0 ml-auto">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <!-- <button class="btn btn-outline-danger btn-sm my-2 my-sm-0" type="submit"><mat-icon>search</mat-icon></button> -->
+    <button mat-stroked-button > <mat-icon>search</mat-icon>  </button>
+  </form>
+
+</nav>
+<!-- <div>
+  this is my div
+</div> -->

@@ -9,8 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class=" mainbox mx-auto mt-5 shadow-lg p-3 mb-5 bg-body rounded">
-    <div  class="mx-auto mt-2 heading" style="border: 1px solid red;">Add question</div>
+  <div class=" mainbox mx-auto ">
+    <!-- mt-5 shadow-lg p-3 mb-5 bg-body rounded -->
+    <div  class="mx-auto mt-2 heading">Add question</div>
     <div class="container tips mt-5 pt-2 shadow-sm  bg-body rounded">
       <p>Tips for getting good answers quickly</p>
       <ul>
@@ -26,15 +27,16 @@
       </ul>
      </div>
      <div class="container pl-4 ">
-       <span class="username"><img src="../../assets/svg(s)/users.png" width="25"  alt="userimg">Aryan Kapoor</span><span> asked to</span>
-       <select class="form-select form-select-sm to" aria-label=".form-select-sm example">
+       <span class="username"><img src="../../assets/svg(s)/users.png" width="25"  alt="userimg">Aryan Kapoor</span>
+       <!-- <span> asked to</span> -->
+       <!-- <select class="form-select form-select-sm to" aria-label=".form-select-sm example">
          <option selected>Public</option>
          <option value="1">Anonyms</option>
          <option value="2">Limited</option>
 
-       </select><br><br>
+       </select><br><br> -->
       <form action="#">
-       <mat-form-field appearance="fill" >
+       <mat-form-field  >
          <mat-label> Category of question</mat-label>
          <mat-select >
            <mat-option *ngFor="let food of foods" [value]="food.value">

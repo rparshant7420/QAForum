@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigationbar',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public Router:Router) { }
 
   ngOnInit(): void {
   }
-
+  profileop(){
+    this.Router.navigateByUrl('/profile');
+  }
 }

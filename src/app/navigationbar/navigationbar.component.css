@@ -1,3 +1,19 @@
-.mybutton{
-  border: 2px solid orangered ;
+#navigations li a {
+ color: #002E5B;
+ font-weight: 500;
+}
+#navigations li a:hover{
+  color: orangered;
+}
+.userprofile{
+  display: inline;
+  /* border: 1px solid red; */
+}
+.namebtn{
+  font-size: large;
+}
+.namebtn{
+  font-size: 1.1rem;
+  color: #282829;
+  font-weight: 500;
 }

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- NAVBAR STARTS -->
+
+  <header>
+    <div class="header-area">
+      <div class="main-header ">
+        <app-preloader></app-preloader>
+        <app-navigationbar></app-navigationbar>
+      </div>
+    </div>
+  </header>
+
+  <!-- BODY STARTS  -->
+
+  <div class="container">
+    <div class="row mt-4">
+
+      <!-- LEFT DIV HERE -->
+
+      <div class="col col-8 shadow p-3 mb-5 bg-white rounded">
+        <div class="container-fluid maininfo shadow p-3 mb-5 bg-white rounded ">
+          <span><img src="../../assets/svg(s)/user-profile.svg" width="120"  alt="USER PROFILE" ></span>
+          <div class="d-inline font-weight-bold text-uppercase ml-4">
+            Karan Kapoor
+          </div>
+         <div class=" d-inline addcreden">
+           <a href="#">Add your credentials</a>
+         </div>
+        </div>
+        <mat-accordion>
+          <mat-expansion-panel  class="expansiontittle">
+            <mat-expansion-panel-header class="expansiontittle">
+              <mat-panel-title class="expansiontittle">
+                Write a description about yourself
+              </mat-panel-title >
+            </mat-expansion-panel-header>
+            <div>
+              <div class="answered"  >
+                <div class="customfont Heading containern shadow-sm p-3 bg-body rounded ">
+                  <a href="#"><img src="../../assets/svg(s)/bold.svg" width="20" class="mr-3" alt="bold"></a>
+                  <a href="#"><img src="../../assets/svg(s)/italic.svg" width="20" class="mr-3" alt="italic"></a>
+                  <!-- <a href="#"><img src="../../assets/svg(s)/ol.svg" width="20" class="mr-4" alt="ordered list"></a> -->
+                  <a href="#"><img src="../../assets/svg(s)/ul.svg" width="23" class="mr-2" alt="unordered list"></a>
+                  <span ml-auto>
+                    <a href="#"><img src="../../assets/svg(s)/photo.svg" width="23" alt=""></a>
+                  </span>
+                </div>
+                <div class="inputans">
+                  <mat-form-field class="ansfield ">
+                    <textarea matInput name="answerText" class="answerText"  rows="8"  ></textarea>
+                  </mat-form-field><br>
+                  <button type="submit" color="primary" class="postbtn " mat-raised-button >Update</button>
+                  <button type="button" class="draftbtn ml-2" mat-stroked-button >Cancel</button>
+                </div>
+              </div>
+            </div>
+           </mat-expansion-panel>
+         </mat-accordion><br>
+        <div class="container">
+          <mat-tab-group >
+            <mat-tab  label="Profile" >
+              <div class="container py-4 shadow p-3 bg-body rounded ">
+                <div class="container d-inline  ">
+                  Profile
+                </div><br><br>
+                <mat-divider></mat-divider>
+                <div class="container belowdiv text-center pt-5 ">
+                  You haven't shared, answered or posted anything yet. <br><br>
+                  <button mat-raised-button color="primary">Ask Questions</button>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Answers">
+              <div class="container py-4 shadow p-3 bg-body rounded ">
+                <div class="container d-inline  ">
+                  Answers
+                </div><br><br>
+                <mat-divider></mat-divider>
+                <div class="container belowdiv text-center pt-5 ">
+                  You haven't answered any questions yet. <br><br>
+                  <!-- <button mat-raised-button color="primary">Ask Questions</button> -->
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Questions">  <div class="container py-4 shadow p-3 bg-body rounded ">
+              <div class="container d-inline  ">
+                Questions
+              </div><br><br>
+              <mat-divider></mat-divider>
+              <div class="container belowdiv text-center pt-5 ">
+                You haven't asked any questions yet. <br><br>
+                <!-- <button mat-raised-button color="primary">Ask Questions</button> -->
+              </div>
+            </div> </mat-tab>
+            <mat-tab label="Shares">  <div class="container py-4 shadow p-3 bg-body rounded ">
+              <div class="container d-inline  ">
+                Shares
+              </div><br><br>
+              <mat-divider></mat-divider>
+              <div class="container belowdiv text-center pt-5 ">
+                You haven't shared anything yet. <br><br>
+                <!-- <button mat-raised-button color="primary">Ask Questions</button> -->
+              </div>
+            </div> </mat-tab>
+            <mat-tab label="Posts">  <div class="container py-4 shadow p-3 bg-body rounded ">
+              <div class="container d-inline  ">
+                Posts
+              </div><br><br>
+              <mat-divider></mat-divider>
+              <div class="container belowdiv text-center pt-5 ">
+                You haven't posted any content yet. <br><br>
+                <!-- <button mat-raised-button color="primary">Ask Questions</button> -->
+              </div>
+            </div> </mat-tab>
+            <mat-tab label="Followers">  <div class="container py-4 shadow p-3 bg-body rounded ">
+              <div class="container d-inline  ">
+                Followers
+              </div><br><br>
+              <mat-divider></mat-divider>
+              <div class="container belowdiv text-center pt-5 ">
+                You don't have any follower yet. <br><br>
+                <!-- <button mat-raised-button color="primary">Ask Questions</button> -->
+              </div>
+            </div> </mat-tab>
+            <mat-tab label="Following">  <div class="container py-4 shadow p-3 bg-body rounded ">
+              <div class="container d-inline ">
+                Following
+              </div><br><br>
+              <mat-divider></mat-divider>
+              <div class="container belowdiv text-center pt-5 ">
+                You haven't followed anybody yet. <br><br>
+                <!-- <button mat-raised-button color="primary">Ask Questions</button> -->
+              </div>
+            </div> </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+
+
+      <!-- RIGHT DIV HERE -->
+
+      <div class="col col-4 shadow p-3 mb-5 bg-white rounded">
+       <div class="container crednhigh">
+        <div class="font-weight-bold shadow-sm p-2 mb-1 bg-white rounded">
+          <button mat-stroked-button style="width: 100%;" (click)="editcresentials()">Credentials and Highlights</button>
+        </div>
+        <div class="container">
+          <ul>
+            <li>Add Employee Credentials</li>
+            <li>Add Educational Credentials</li>
+            <li>lives in Raipur Rani,Haryana</li>
+            <li>Knows Hindi</li>
+            <li>Joined December 2018</li>
+          </ul>
+        </div>
+       </div>
+       <div class="container intpeople">
+         <div class="font-weight-bold shadow-sm p-2 mb-1 bg-white rounded">
+           <button mat-stroked-button style="width: 100%;" (click)="createcategory()">Create a category</button>
+         </div>
+         <div class="container p-5 shadow-sm p-2 mb-1 bg-white rounded text-center">
+           <button mat-stroked-button (click)="followinterests()">Follow Peoples</button>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</body>
+</html>
