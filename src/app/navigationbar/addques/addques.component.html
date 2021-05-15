@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class=" mainbox mx-auto ">
+    <!-- mt-5 shadow-lg p-3 mb-5 bg-body rounded -->
+    <div  class="mx-auto mt-2 heading">Add question</div>
+    <div class="container tips mt-5 pt-2 shadow-sm  bg-body rounded">
+      <p>Tips for getting good answers quickly</p>
+      <ul>
+        <li>
+         Make sure your question has not been asked already
+        </li>
+        <li>
+         Keep your question short and to the point
+        </li>
+        <li>
+         Double-check grammar and spelling
+        </li>
+      </ul>
+     </div>
+     <div class="container pl-4 ">
+       <span class="username"><img src="../../assets/svg(s)/users.png" width="25"  alt="userimg">Aryan Kapoor</span>
+
+      <form #addQue="ngForm" (ngSubmit)="onSubmit(addQue)" >
+       <mat-form-field  >
+         <mat-label> Category of question</mat-label>
+         <mat-select name="category" #category="ngModel" [(ngModel)]="questionsService.newQues.category">
+           <mat-option *ngFor="let food of foods" [value]="food.value" >
+             {{food.viewValue}}
+           </mat-option>
+         </mat-select>
+       </mat-form-field>
+       <mat-form-field class="que">
+         <input matInput placeholder="Write your question here." name="question" #question="ngModel" [(ngModel)]="questionsService.newQues.question" >
+       </mat-form-field>
+       <mat-form-field class="que">
+         <input matInput placeholder="About your question(in detail)" name="questionInfo" #questionInfo="ngModel" [(ngModel)]="questionsService.newQues.questionInfo" >
+       </mat-form-field>
+       <mat-form-field class="que" >
+         <input matInput placeholder="Added by" name="userID" #userID="ngModel" [(ngModel)]="questionsService.newQues.userID" >
+       </mat-form-field>
+       <button mat-raised-button class="subutton" (click)="RunOnSubmit()" type="submit">Submit</button>
+      </form>
+     </div>
+   </div>
+
+</body>
+</html>

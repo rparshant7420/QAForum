@@ -4,18 +4,24 @@
   <a href="#" class="navbar-brand ml-4">
       <img src="assets/mysources/img/logo/logo.png" alt="">
   </a>
-  <ul class="navbar-nav " id="navigations">
-    <li class="nav-item m-2 ml-5"><a href="#" class="nav-link">HOME</a></li>
-    <li class="nav-item m-2"><a href="/about" class="nav-link">FOLLOWING</a></li>
-    <li class="nav-item m-2"><a href="/services" class="nav-link">SERVICES</a></li>
-    <li class="nav-item m-2"><a href="/questions" class="nav-link">QUESTIONS</a></li>
-    <li class="nav-item m-2"><a href="/answer" class="nav-link">ANSWERS</a></li>
-    <li class="nav-item m-2"><a href="#" class="nav-link">SIGN UP</a></li>
-    <!-- <div class="ml-auto my-auto userprofile"><a href="#" [matMenuTriggerFor]="menu" ><img src="../../assets/svg(s)/user-profile.svg" width="30" alt=""></a></div> -->
-    <button mat-button [matMenuTriggerFor]="menu"><img src="../../assets/svg(s)/user-profile.svg" width="24" alt=""></button>
-<mat-menu #menu="matMenu" class="optionmenu">
-  <button  mat-menu-item class="d-block btn-block"><img src="../../assets/svg(s)/user-profile.svg" width="40" alt=""></button>
-  <button mat-menu-item (click)="profileop()" class="btn-block mt-2"><p class="namebtn">ARYAN KAPOOR <i class="bi bi-arrow-right-circle-fill"></i></p></button>
+  <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+
+  <div class="collapse navbar-collapse" id="mynavbar">
+    <ul class="navbar-nav " id="navigations">
+      <li class="nav-item m-2 ml-5"><a href="#" class="nav-link">HOME</a></li>
+      <li class="nav-item m-2"><a href="/questions" class="nav-link">QUESTIONS</a></li>
+      <li class="nav-item m-2"><a href="/answer" class="nav-link">ANSWERS</a></li>
+      <li class="nav-item m-2"><a href="/signin" class="nav-link text-uppercase">SIGN in</a></li>
+      <!-- <li class="nav-item m-2"><a href="/about" class="nav-link">FOLLOWING</a></li> -->
+      <li class="nav-item m-2"><a href="/services" class="nav-link">SERVICES</a></li>
+      <li class="nav-item m-2"><a href="/signup" class="nav-link text-uppercase">register </a></li>
+      <!-- <div class="ml-auto my-auto userprofile"><a href="#" [matMenuTriggerFor]="menu" ><img src="../../assets/svg(s)/user-profile.svg" width="30" alt=""></a></div> -->
+      <button mat-button [matMenuTriggerFor]="menu"><img src="../../assets/svg(s)/user-profile.svg" width="24" alt=""></button>
+      <mat-menu #menu="matMenu" class="optionmenu px-4">
+        <button  mat-menu-item class="d-block btn-block"><img src="../../assets/svg(s)/user-profile.svg" width="40" alt=""></button>
+  <button mat-menu-item (click)="profileop()"  class="btn-block mt-2"><p style="font-family: cursive;" class="namebtn text-uppercase font-weight-bold">{{userinfo.name}} <i class="bi bi-arrow-right-circle-fill"></i></p></button>
   <mat-divider></mat-divider>
   <button mat-menu-item><i class="bi bi-bookmark"></i>Messages</button>
   <!-- <button mat-menu-item>Create Ad</button> -->
@@ -26,17 +32,18 @@
   <button mat-menu-item>Settings</button>
   <button mat-menu-item>Languages</button>
   <button mat-menu-item>help</button>
-  <button mat-menu-item>Logout</button>
+  <button mat-menu-item (click)="onLogout()">Logout</button>
 
 </mat-menu>
 
-  </ul>
+</ul>
 
-  <form class="form-inline my-2 my-lg-0 ml-auto">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <!-- <button class="btn btn-outline-danger btn-sm my-2 my-sm-0" type="submit"><mat-icon>search</mat-icon></button> -->
-    <button mat-stroked-button > <mat-icon>search</mat-icon>  </button>
-  </form>
+<form class="form-inline my-2 my-lg-0 ml-auto">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  <!-- <button class="btn btn-outline-danger btn-sm my-2 my-sm-0" type="submit"><mat-icon>search</mat-icon></button> -->
+  <button mat-stroked-button > <mat-icon>search</mat-icon>  </button>
+</form>
+</div>
 
 </nav>
 <!-- <div>

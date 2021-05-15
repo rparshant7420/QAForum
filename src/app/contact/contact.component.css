@@ -1,0 +1,21 @@
+.contact{
+  height: 80vh;
+  background-image: url('../../assets/Myimgs/my-bg.jpg');
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
+.cform{
+  /* border: 1px solid red !important; */
+  width: 60%;
+}
+mat-form-field{
+  width: 100%;
+}
+.need h2{
+  color: orangered;
+}
+button.subutn{
+  color: #ffff;
+  background-color: rgb(187, 55, 8);
+}

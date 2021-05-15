@@ -1,0 +1,7 @@
+To store token in local storage -->
+
+>  in services we made 3 functions
+>  in login.ts we r sending data to store in token
+>  now we stored that token in localstorage
+>  now we stored id in localstorage from token
+>  now we made a function in services to check wheather user is loggedin

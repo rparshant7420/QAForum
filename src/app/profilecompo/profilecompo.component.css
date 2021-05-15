@@ -1,7 +1,12 @@
-.addcreden a{
+.name{
+  font-size: 1.5rem;
+  font-family: cursive;
+}
+/* .addcreden a{
   font-size: 0.7rem;
   color: #939598;
-}
+} */
+
 .borderit{
   border: 1px solid red;
 }
@@ -16,4 +21,67 @@
   /* max-height: 500px; */
   min-height: 200px;
   /* border: 1px solid red; */
+}
+
+@media screen and (max-width: 1000px) {
+  button.highCredn p {
+    font-size: 1.1vw;
+    /* color: red; */
+  }
+}
+table tr td{
+  width: 50%;
+  /* border: 1px solid black; */
+}
+table tr td.left{
+  color: #002D5B;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* TEMPLATE */
+
+body {
+  background-color: #efefef;
+}
+
+.profile-pic {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+}
+
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 1000px !important;
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    border: 8px solid rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 72px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+  position: absolute;
+  top: 167px;
+  right: 30px;
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
 }

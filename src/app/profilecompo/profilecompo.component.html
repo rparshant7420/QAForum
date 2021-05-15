@@ -28,14 +28,29 @@
 
       <div class="col col-8 shadow p-3 mb-5 bg-white rounded">
         <div class="container-fluid maininfo shadow p-3 mb-5 bg-white rounded ">
-          <span><img src="../../assets/svg(s)/user-profile.svg" width="120"  alt="USER PROFILE" ></span>
-          <div class="d-inline font-weight-bold text-uppercase ml-4">
-            Karan Kapoor
+
+          <!-- TEMPLATE -->
+
+
+
+          <span><img src="../../assets/svg(s)/user-profile.svg" width="120"  alt="PROFILE IMG" class="proimg" ></span>
+
+          <div class="d-inline font-weight-bold text-uppercase ml-4 name">
+            <!-- {{userinfo.name}} -->
           </div>
-         <div class=" d-inline addcreden">
-           <a href="#">Add your credentials</a>
+         <div class="d-inline ">
+          <button mat-stroked-button (click)="editProfile()">edit</button>
          </div>
         </div>
+
+        <mat-tab-group mat-align-tabs="center">
+
+          <!-- ABOUT STARTS -->
+
+          <mat-tab label="About">
+
+            <!-- WRITE ABOUT YOURSELF STARTS -->
+
         <mat-accordion>
           <mat-expansion-panel  class="expansiontittle">
             <mat-expansion-panel-header class="expansiontittle">
@@ -65,6 +80,33 @@
             </div>
            </mat-expansion-panel>
          </mat-accordion><br>
+
+         <table class="ml-4">
+           <tr>
+             <td class="left">Contact</td>
+             <!-- <td>{{Credentials.contact}}</td> -->
+           </tr>
+           <!-- <tr>
+             <td class="left">Email</td>
+             <td>rparshant7420@gmial.com</td>
+           </tr> -->
+           <tr>
+             <td class="left">Location</td>
+             <!-- <td>{{Credentials.location}}</td> -->
+           </tr>
+           <tr>
+             <td class="left">Languages</td>
+             <!-- <td>{{Credentials.languages}}</td> -->
+           </tr>
+         </table>
+
+         <!-- ABOUT ENDS -->
+
+         <!-- TIMELINE STARTS -->
+
+      </mat-tab>
+      <mat-tab label="Timeline">
+
         <div class="container">
           <mat-tab-group >
             <mat-tab  label="Profile" >
@@ -75,7 +117,7 @@
                 <mat-divider></mat-divider>
                 <div class="container belowdiv text-center pt-5 ">
                   You haven't shared, answered or posted anything yet. <br><br>
-                  <button mat-raised-button color="primary">Ask Questions</button>
+                  <button mat-raised-button color="primary" (click)="addQues()">Ask Questions</button>
                 </div>
               </div>
             </mat-tab>
@@ -143,23 +185,25 @@
             </div> </mat-tab>
           </mat-tab-group>
         </div>
+      </mat-tab>
+    </mat-tab-group>
       </div>
 
 
       <!-- RIGHT DIV HERE -->
 
       <div class="col col-4 shadow p-3 mb-5 bg-white rounded">
-       <div class="container crednhigh">
+       <div class="container crednhigh" >
         <div class="font-weight-bold shadow-sm p-2 mb-1 bg-white rounded">
-          <button mat-stroked-button style="width: 100%;" (click)="editcresentials()">Credentials and Highlights</button>
+          <button mat-stroked-button style="width: 100%;" class="highCredn responsive-width"  (click)="editcredentials()" [disabled]="Credentials"><p >Credentials and Highlights</p></button>
         </div>
         <div class="container">
           <ul>
             <li>Add Employee Credentials</li>
             <li>Add Educational Credentials</li>
-            <li>lives in Raipur Rani,Haryana</li>
-            <li>Knows Hindi</li>
-            <li>Joined December 2018</li>
+            <li>Add Your Location</li>
+            <li>Languages You Know</li>
+            <!-- <li>Joined December 2018</li> -->
           </ul>
         </div>
        </div>

@@ -1,0 +1,22 @@
+<form #editForm="ngForm" (ngSubmit)="onSubmit(editForm)">
+  <div class="mainbox">
+    <div class="heading font-weight-bold text-center mb-2">
+      Edit Your Profile
+    </div>
+    <div class="infoheading mb-2 text-center">
+     You can update your profile here simply.
+    </div>
+    <div class="inputfields">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter your name." name="name" #name="ngModel" [(ngModel)]="userServices.Edit.name" >
+      </mat-form-field><br>
+      <mat-form-field class="example-full-width">
+        <mat-label>email</mat-label>
+        <input matInput placeholder="Enter your email." name="email" #email="ngModel" [(ngModel)]="userServices.Edit.email">
+      </mat-form-field>
+      <button mat-raised-button style="width: 100%;" color="primary">edit</button>
+      <button mat-stroked-button style="width: 100%;" class="mt-1" [mat-dialog-close]="true" >cancel</button>
+    </div>
+  </div>
+</form>
